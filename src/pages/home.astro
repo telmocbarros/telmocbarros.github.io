@@ -1,8 +1,19 @@
 ---
 import Container from '../components/Container.jsx';
+import TypewriterText from '../components/TypewriterText.jsx';
 
 const introText =
   "With 6 years of full-stack engineering experience spanning two countries and five innovative companies, I've cultivated a unique blend of technical expertise and leadership vision.";
+
+const occupations = [
+  'Full-Stack Engineer',
+  'Tech Enthusiast',
+  'Mentor',
+  'Problem Solver',
+  'Dancer',
+  'Traveler',
+  'Photographer',
+];
 ---
 
 <section class="hero-section py-20 lg:py-32">
@@ -14,7 +25,7 @@ const introText =
             Hi, I'm <span class="text-primary">Telmo</span>
           </h1>
           <h2 class="text-xl lg:text-2xl text-gray-600 font-medium">
-            Full-Stack Engineer
+            <TypewriterText words={occupations} client:load />
           </h2>
         </div>
 
