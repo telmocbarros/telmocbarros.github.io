@@ -13,6 +13,25 @@ export default function Projects() {
     //   github: '#',
     //   live: '#'
     // }
+    {
+      id: 1,
+      name: 'DataPulse',
+      imgSrc: '/placeholder.jpg',
+      description:
+        'Self-service analytics platform that transforms CSV data into interactive visualizations. Features comprehensive validation, intelligent error handling for malformed data, and optimized PostgreSQL queries. Built to demonstrate production-ready full-stack development patterns.',
+      technologies: [
+        'Node.js',
+        'TypeScript',
+        'Express',
+        'React',
+        'PostgreSQL',
+        'Prisma',
+        'TailwindCSS',
+        'Recharts',
+      ],
+      github: 'https://github.com/telmocbarros/data-pulse',
+      live: 'https://data-pulse-25y0.onrender.com/',
+    },
   ];
 
   return (
@@ -65,12 +84,14 @@ export default function Projects() {
                 <div className="flex gap-3 mt-auto">
                   <a
                     href={project.github}
+                    target="_blank"
                     className="flex-1 text-center py-2 px-4 border-2 border-primary text-primary font-medium rounded-lg hover:bg-primary hover:text-white transition-colors"
                   >
                     GitHub
                   </a>
                   <a
                     href={project.live}
+                    target="_blank"
                     className="flex-1 text-center py-2 px-4 bg-primary text-white font-medium rounded-lg hover:bg-secondary transition-colors"
                   >
                     Live Demo
