@@ -3,18 +3,18 @@ import Container from './Container.jsx';
 
 export default function Projects() {
   const projects = [
-    // {
-    //   id: 1,
-    //   name: 'Budget Tracker',
-    //   imgSrc: '//placeholder.jpg',
-    //   description:
-    //     'A full-stack budget tracking application that allows users to manage their finances, track expenses, and visualize spending patterns through interactive charts.',
-    //   technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-    //   github: '#',
-    //   live: '#'
-    // }
     {
       id: 1,
+      name: 'Cozy Coin',
+      imgSrc: '/placeholder.jpg',
+      description:
+        'A native iOS budget tracking application built with SwiftUI. Features intuitive expense categorization, real-time balance tracking, and data persistence using Core Data. Demonstrates modern iOS development practices with clean architecture and native UI components.',
+      technologies: ['Swift', 'SwiftUI', 'Core Data'],
+      github: 'https://github.com/telmocbarros/budget-app',
+      live: null,
+    },
+    {
+      id: 2,
       name: 'DataPulse',
       imgSrc: '/placeholder.jpg',
       description:
@@ -85,17 +85,21 @@ export default function Projects() {
                   <a
                     href={project.github}
                     target="_blank"
-                    className="flex-1 text-center py-2 px-4 border-2 border-primary text-primary font-medium rounded-lg hover:bg-primary hover:text-white transition-colors"
+                    className={`text-center py-2 px-4 border-2 border-primary text-primary font-medium rounded-lg hover:bg-primary hover:text-white transition-colors ${
+                      !project.live ? 'flex-1' : 'flex-1'
+                    }`}
                   >
                     GitHub
                   </a>
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    className="flex-1 text-center py-2 px-4 bg-primary text-white font-medium rounded-lg hover:bg-secondary transition-colors"
-                  >
-                    Live Demo
-                  </a>
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      className="flex-1 text-center py-2 px-4 bg-primary text-white font-medium rounded-lg hover:bg-secondary transition-colors"
+                    >
+                      Live Demo
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
